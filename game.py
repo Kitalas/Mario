@@ -44,3 +44,48 @@ def main():
 
     while not hero.winner:
         timer.tick(FPS)
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                raise SystemExit('QUIT')
+            '''
+            if event.type == KEYDOWN and event.type == pygame.K_UP:
+                up = True
+            if event.type == KEYDOWN and event.type == pygame.K_LEFT:
+                left = True
+            if event.type == KEYDOWN and event.type == pygame.K_RIGHT:
+                right = True
+            if event.type == KEYDOWN and event.type == pygame.K_LSHIFT:
+                running = True
+            '''
+            if event.type == KEYDOWN:
+                if event.key == pygame.K_UP:
+                    up = True
+                if event.type == pygame.K_LEFT:
+                    left = True
+                if event.type == pygame.K_RIGHT:
+                    right = True
+                if event.type == pygame.K_LSHIFT:
+                    running = True
+
+            if event.type == KEYUP:
+                if event.key == pygame.K_UP:
+                    up = False
+                if event.key == pygame.K_LEFT:
+                    left = False
+                if event.key == pygame.K_RIGHT:
+                    right = False
+                if event.key == pygame.K_LSHIFT:
+                    running = False
+
+        screen.blit(bg, SCREEN_START)
+
+        monsters.update(platform)
+        camera.update()
+        hero.uppdate(left, right, up, running, platform)
+        for event in entities:
+            screen.blit(event.image, camera.apply)
+
+        pygame.display.update()
+
+level = []
+entities = pygame.sprite.Group()
