@@ -88,4 +88,10 @@ def main():
         pygame.display.update()
 
 level = []
+platform = []
 entities = pygame.sprite.Group()
+animatedEntities = pygame.sprite.Group()
+monsters = pygame.sprite.Group()
+
+if __name__ == '__main__':
+    main()
