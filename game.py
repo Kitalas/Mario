@@ -1,4 +1,4 @@
-import os.path
+import os
 import pygame
 from pygame import Color
 
