@@ -1,7 +1,7 @@
 import os
 from pygame import *
 
-MONSTER_WIDTH, MONSTER_HEIHGT, MONSTER_COLOR = 32, 32, '#2111FF'
+MONSTER_WIDTH, MONSTER_HEIGHT, MONSTER_COLOR = 32, 32, '#2111FF'
 ICON_DIR = os.path.dirname(__file__)
 
 class Monster:
