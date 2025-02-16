@@ -1,13 +1,7 @@
 import os
 import pygame
 from pygame import Color
-
-FPS = 60
-WIN_WIDTH = 800
-WIN_HEIGHT = 600
-DISPLAY = (WIN_WIDTH, WIN_HEIGHT)
-BACKGROUND_COLOR = "#000000"
-FILE_DIR = os.path.dirname(__file__)
+from settings import WIN_WIDTH, WIN_HEIGHT, DISPLAY, BACKGROUND_COLOR, FPS, SCREEN_START, FILE_DIR
 
 class Game:
     def __init__(self):

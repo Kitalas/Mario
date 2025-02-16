@@ -1,9 +1,6 @@
 import os
 from pygame import *
-
-
-PLATFORM_WIDTH, PLATFORM_HEIGHT, PLATFORM_COLOR = 32, 32, '#000000'
-ICON_DIR = os.path.dirname(__file__)
+from settings import PLATFORM_WIDTH, PLATFORM_HEIGHT, PLATFORM_COLOR, ICON_DIR_PLATFORM
 
 class Platform(sprite.Sprite):
     def __init__(self, x, y):
