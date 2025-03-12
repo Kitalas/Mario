@@ -276,3 +276,5 @@ def start_game():
 
 
 start_game()
+
+# ono bez settings
